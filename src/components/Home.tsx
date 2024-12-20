@@ -1,7 +1,5 @@
 import {
-	Box,
 	Button,
-	Grid,
 	Paper,
 	Table,
 	TableBody,
@@ -11,19 +9,19 @@ import {
 	TableRow,
 } from "@mui/material";
 import "../index.css";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+//import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import getDayMessage from "../components/dayMessages";
 import "./App.css";
-const Item = styled(Paper)(({ theme }) => ({
-	...theme.typography.body2,
-	textAlign: "center",
-	color: theme.palette.text.secondary,
-	height: 60,
-	lineHeight: "60px",
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+// 	...theme.typography.body2,
+// 	textAlign: "center",
+// 	color: theme.palette.text.secondary,
+// 	height: 60,
+// 	lineHeight: "60px",
+// }));
 
-const darkTheme = createTheme({ palette: { mode: "dark" } });
-const lightTheme = createTheme({ palette: { mode: "light" } });
+// const darkTheme = createTheme({ palette: { mode: "dark" } });
+// const lightTheme = createTheme({ palette: { mode: "light" } });
 
 export function Home() {
 	return (
