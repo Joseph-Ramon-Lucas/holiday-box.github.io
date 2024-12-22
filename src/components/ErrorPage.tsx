@@ -9,7 +9,9 @@ export function ErrorPage() {
 			<h2>Error: 404</h2>
 
 			<p>click this button to go home</p>
-			<Button onClick={() => navigateTo("/")}>Home 🏠</Button>
+			<Button onClick={() => navigateTo("/holiday-box.github.io")}>
+				Home 🏠
+			</Button>
 		</div>
 	);
 }

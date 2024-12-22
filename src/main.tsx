@@ -8,7 +8,7 @@ import { Home } from "./components/Home.tsx";
 createRoot(document.getElementById("root")!).render(
 	<BrowserRouter>
 		<Routes>
-			<Route path="/" element={<Home />} />
+			<Route path="/holiday-box.github.io" element={<Home />} />
 			<Route path="*" element={<ErrorPage />} />
 		</Routes>
 	</BrowserRouter>,
