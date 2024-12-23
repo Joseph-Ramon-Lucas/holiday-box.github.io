@@ -28,16 +28,16 @@ export function Home() {
 	return (
 		<Paper
 			sx={{
-				padding: { xs: "32px", lg: "100px" },
+				padding: { xs: "32px", m: "50px 250px", lg: "100px 500px" },
 				background: "beige",
 				textAlign: "center",
-				margin: "40px",
+				margin: { xs: "25px", lg: "40px" },
 			}}
 		>
 			<h1 className="text-5xl font-extrabold text-center p-10">
 				🎁 Joe's Holiday Calendar 🎄
 			</h1>
-			<h2 className="text-4xl font-bold text-center">December</h2>
+			<h2 className="text-4xl font-bold text-center p-1">December</h2>
 			<Table sx={{ minWidth: "full" }}>
 				<th>sun</th>
 				<th>mon</th>
@@ -46,14 +46,25 @@ export function Home() {
 				<th>thu</th>
 				<th>fri</th>
 				<th>sat</th>
-				<TableRow>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>1</td>
+				<TableRow sx={{ padding: "10px" }}>
+					<Button onClick={() => getDayMessage(1)}>
+						<TableCell>1</TableCell>
+					</Button>
 					<td>2</td>
 					<td>3</td>
 					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+				</TableRow>
+				<TableRow sx={{ padding: "10px" }}>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
 				</TableRow>
 			</Table>
 		</Paper>
