@@ -17,20 +17,9 @@ import getDayMessage from "../components/dayMessages";
 import PopupDialog from "./PopupDialog";
 import { styled } from "@mui/material/styles";
 
-// const Item = styled(Paper)(({ theme }) => ({
-// 	...theme.typography.body2,
-// 	textAlign: "center",
-// 	color: theme.palette.text.secondary,
-// 	height: 60,
-// 	lineHeight: "60px",
-// }));
-
-// const darkTheme = createTheme({ palette: { mode: "dark" } });
-// const lightTheme = createTheme({ palette: { mode: "light" } });
-
 export function Home() {
 	const StyledButton = styled(Button)(() => ({
-		borderRadius: "5px",
+		borderRadius: "10px",
 		// maxHeight: "30px",
 		// maxWidth: "20px",
 	}));
@@ -52,10 +41,10 @@ export function Home() {
 	return (
 		<Paper
 			sx={{
-				padding: { xs: "16px", md: "32px 150px", lg: "50px 300px" },
+				padding: { xs: "24px", md: "64px 128px", lg: "128px 256px" },
 				background: "beige",
 				textAlign: "center",
-				margin: { xs: "25px", lg: "40px" },
+				margin: { xs: "5px", md: "25px", lg: "40px" },
 				borderRadius: { xs: "32px" },
 			}}
 			elevation={15}
@@ -67,14 +56,20 @@ export function Home() {
 
 			<Paper
 				elevation={10}
-				sx={{ borderRadius: " 15px", padding: "5px", margin: "5px" }}
+				sx={{
+					borderRadius: " 15px",
+					padding: "5px",
+					margin: { sx: "1px", lg: "5px" },
+				}}
 			>
 				<Paper elevation={0} square sx={{ padding: "16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(DAYS_OF_THE_WEEK).map((day, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index} size="grow">
-								<Paper elevation={5}>{day} </Paper>
+								<Paper elevation={5} sx={{ borderRadius: "10px" }}>
+									{day}{" "}
+								</Paper>
 							</StyledGrid>
 						))}
 					</Grid>
@@ -85,7 +80,11 @@ export function Home() {
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index} size="grow">
-								<div>{index + 1}</div>
+								<div>
+									<StyledButton onClick={() => getDayMessage(index + 1)}>
+										{index + 1}
+									</StyledButton>
+								</div>
 							</StyledGrid>
 						))}
 					</Grid>
@@ -96,7 +95,11 @@ export function Home() {
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 7} size="grow">
-								<div>{index + 8}</div>
+								<div>
+									<StyledButton onClick={() => getDayMessage(index + 8)}>
+										{index + 7}
+									</StyledButton>
+								</div>
 							</StyledGrid>
 						))}
 					</Grid>
@@ -107,7 +110,45 @@ export function Home() {
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 14} size="grow">
-								<div>{index + 15}</div>
+								<div>
+									<StyledButton onClick={() => getDayMessage(index + 15)}>
+										{index + 14}
+									</StyledButton>
+								</div>
+							</StyledGrid>
+						))}
+					</Grid>
+				</Paper>
+				{/* week 4 */}
+				<Paper elevation={0} square>
+					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
+						{Array.from(Array(7)).map((_, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+							<StyledGrid key={index + 21} size="grow">
+								<div>
+									<StyledButton onClick={() => getDayMessage(index + 22)}>
+										{index + 21}
+									</StyledButton>
+								</div>
+							</StyledGrid>
+						))}
+					</Grid>
+				</Paper>
+				{/* week 5 */}
+				<Paper elevation={0} square>
+					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
+						{Array.from(Array(7)).map((_, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+							<StyledGrid key={index + 28} size="grow">
+								{/*  if the days go past 31 (31 % 7 == 3) -> 
+								then add extra white space to make it look more like a calendar and keep it aligned */}
+								{index < 3 ? (
+									<StyledButton onClick={() => getDayMessage(index + 29)}>
+										<div>{index + 29}</div>
+									</StyledButton>
+								) : (
+									<div> </div>
+								)}
 							</StyledGrid>
 						))}
 					</Grid>
