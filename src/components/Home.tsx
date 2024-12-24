@@ -1,25 +1,16 @@
-import {
-	Button,
-	Grid2,
-	Paper,
-	Table,
-	TableBody,
-	TableCell,
-	TableContainer,
-	TableHead,
-	TableHeadProps,
-	TableRow,
-} from "@mui/material";
+import { Button, Grid2, Paper } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import "../index.css";
 //import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import getDayMessage from "../components/dayMessages";
-import PopupDialog from "./PopupDialog";
+//import PopupDialog from "./PopupDialog";
 import { styled } from "@mui/material/styles";
 
 export function Home() {
 	const StyledButton = styled(Button)(() => ({
 		borderRadius: "10px",
+		padding: 0,
+		margin: 0,
 		// maxHeight: "30px",
 		// maxWidth: "20px",
 	}));
@@ -49,10 +40,10 @@ export function Home() {
 			}}
 			elevation={15}
 		>
-			<h1 className="text-5xl font-extrabold text-center p-10">
+			<h1 className="text-5xl font-extrabold text-center p-7">
 				🎁 Joe's Holiday Calendar 🎄
 			</h1>
-			<h2 className="text-4xl font-bold text-center pb-5">December</h2>
+			<h2 className="text-4xl font-bold text-center pb-3">December</h2>
 
 			<Paper
 				elevation={10}
@@ -75,14 +66,14 @@ export function Home() {
 					</Grid>
 				</Paper>
 				{/* week 1 */}
-				<Paper elevation={0} square>
+				<Paper elevation={0} square sx={{ padding: "8px 16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 1)}>
-										{index + 1}
+										<strong>{index + 1}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -90,14 +81,14 @@ export function Home() {
 					</Grid>
 				</Paper>
 				{/* week 2 */}
-				<Paper elevation={0} square>
+				<Paper elevation={0} square sx={{ padding: "8px 16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 7} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 8)}>
-										{index + 7}
+										<strong>{index + 7}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -105,14 +96,14 @@ export function Home() {
 					</Grid>
 				</Paper>
 				{/* week 3 */}
-				<Paper elevation={0} square>
+				<Paper elevation={0} square sx={{ padding: "8px 16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 14} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 15)}>
-										{index + 14}
+										<strong>{index + 14}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -120,14 +111,14 @@ export function Home() {
 					</Grid>
 				</Paper>
 				{/* week 4 */}
-				<Paper elevation={0} square>
+				<Paper elevation={0} square sx={{ padding: "8px 16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 21} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 22)}>
-										{index + 21}
+										<strong>{index + 21}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -135,7 +126,7 @@ export function Home() {
 					</Grid>
 				</Paper>
 				{/* week 5 */}
-				<Paper elevation={0} square>
+				<Paper elevation={0} square sx={{ padding: "8px 16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
@@ -144,7 +135,9 @@ export function Home() {
 								then add extra white space to make it look more like a calendar and keep it aligned */}
 								{index < 3 ? (
 									<StyledButton onClick={() => getDayMessage(index + 29)}>
-										<div>{index + 29}</div>
+										<div>
+											<strong>{index + 29}</strong>
+										</div>
 									</StyledButton>
 								) : (
 									<div> </div>
@@ -154,6 +147,18 @@ export function Home() {
 					</Grid>
 				</Paper>
 			</Paper>
+			<Button
+				autoCapitalize="none"
+				size="small"
+				color="secondary"
+				variant="outlined"
+				sx={{ bottom: "0", padding: "5px", margin: "10px" }}
+				onClick={() => {
+					getDayMessage(0);
+				}}
+			>
+				About
+			</Button>
 		</Paper>
 	);
 }
