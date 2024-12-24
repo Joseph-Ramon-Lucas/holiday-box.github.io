@@ -39,6 +39,16 @@ export function Home() {
 		alignContent: "center",
 	}));
 
+	const DAYS_OF_THE_WEEK: Array<string> = [
+		"sun",
+		"mon",
+		"tue",
+		"wed",
+		"thu",
+		"fri",
+		"sat",
+	];
+
 	return (
 		<Paper
 			sx={{
@@ -61,34 +71,19 @@ export function Home() {
 			>
 				<Paper elevation={0} square sx={{ padding: "16px" }}>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
-						<StyledGrid size="grow">
-							<Paper>sun</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>mon</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>tue</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>wed</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>thu</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>fri</Paper>
-						</StyledGrid>
-						<StyledGrid size="grow">
-							<Paper>sat</Paper>
-						</StyledGrid>
-						{/*  */}
+						{Array.from(DAYS_OF_THE_WEEK).map((day, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+							<StyledGrid key={index} size="grow">
+								<Paper elevation={5}>{day} </Paper>
+							</StyledGrid>
+						))}
 					</Grid>
 				</Paper>
 				{/* week 1 */}
 				<Paper elevation={0} square>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index} size="grow">
 								<div>{index + 1}</div>
 							</StyledGrid>
@@ -99,6 +94,7 @@ export function Home() {
 				<Paper elevation={0} square>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 7} size="grow">
 								<div>{index + 8}</div>
 							</StyledGrid>
@@ -109,6 +105,7 @@ export function Home() {
 				<Paper elevation={0} square>
 					<Grid container spacing={{ xs: 0.3, md: 0.5, lg: 1 }}>
 						{Array.from(Array(7)).map((_, index) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index + 14} size="grow">
 								<div>{index + 15}</div>
 							</StyledGrid>
