@@ -59,7 +59,7 @@ export function Home() {
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							<StyledGrid key={index} size="grow">
 								<Paper elevation={5} sx={{ borderRadius: "10px" }}>
-									{day}{" "}
+									{day}
 								</Paper>
 							</StyledGrid>
 						))}
@@ -88,7 +88,7 @@ export function Home() {
 							<StyledGrid key={index + 7} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 8)}>
-										<strong>{index + 7}</strong>
+										<strong>{index + 8}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -103,7 +103,7 @@ export function Home() {
 							<StyledGrid key={index + 14} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 15)}>
-										<strong>{index + 14}</strong>
+										<strong>{index + 15}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
@@ -118,7 +118,7 @@ export function Home() {
 							<StyledGrid key={index + 21} size="grow">
 								<div>
 									<StyledButton onClick={() => getDayMessage(index + 22)}>
-										<strong>{index + 21}</strong>
+										<strong>{index + 22}</strong>
 									</StyledButton>
 								</div>
 							</StyledGrid>
