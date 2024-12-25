@@ -25,10 +25,16 @@ function getDayMessage(day: number): void {
 			alert("[DAY 3]\n" + "Talking about all the tea that happened at work 💅");
 			break;
 		case 4:
+			// alert(
+			// 	"[DAY 4]\n" +
+			// 		"Going to see the Philly portal near Love Park and look at the European Traffic lights change colors 🚦\n" +
+			// 		"And everyone's taking pictures of a blank screen while it loads 🌍📸📸📸",
+			// );
 			alert(
 				"[DAY 4]\n" +
-					"Going to see the Philly portal near Love Park and look at the European Traffic lights change colors 🚦\n" +
-					"And everyone's taking pictures of a blank screen while it loads 🌍📸📸📸",
+					"I'm pretty sure we went to visit the Philly portal and look at European streets...\n" +
+					"um.. But I know for a fact that we had so much fun filming our taco cooking adventures! 🌮\n" +
+					"Such funny vlogs 🫰🫰🫰",
 			);
 			break;
 
