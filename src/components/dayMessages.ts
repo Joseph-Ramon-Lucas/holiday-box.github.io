@@ -1,5 +1,3 @@
-import { breadcrumbsClasses } from "@mui/material";
-
 function getDayMessage(day: number): void {
 	switch (day) {
 		case 0:
