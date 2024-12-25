@@ -41,9 +41,9 @@ export function Home() {
 			elevation={15}
 		>
 			<h1 className="text-5xl font-extrabold text-center p-7">
-				🎁 Joe's Holiday Calendar 🎄
+				🎁 Jo & Joe's Holiday Calendar 🎄
 			</h1>
-			<h2 className="text-4xl font-bold text-center pb-3">December</h2>
+			<h2 className="text-4xl font-bold text-center pb-3">December 2024</h2>
 
 			<Paper
 				elevation={10}
