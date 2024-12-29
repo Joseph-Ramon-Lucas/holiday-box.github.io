@@ -177,17 +177,22 @@ function getDayMessage(day: number): void {
 			);
 			break;
 		case 26:
-			alert("We did a lil interviewing. Learned that one company was not it");
+			alert(
+				"[DAY 26]\n" +
+					"We did a lil interviewing. Learned that one company was not it",
+			);
 
 			break;
 		case 27:
 			alert(
-				"Teaching you a lil SQL because you came running to me with data base questions inspired to learn 🐘",
+				"[DAY 27]\n" +
+					"Teaching you a lil SQL because you came running to me with data base questions inspired to learn 🐘",
 			);
 			break;
 		case 28:
 			alert(
-				"You dyed your hair!! And we watched a cozy movie together while we remembered last year's holiday chaos",
+				"[DAY 28]\n" +
+					"You dyed your hair!! And we watched a cozy movie together while we remembered last year's holiday chaos",
 			);
 			break;
 		default:
