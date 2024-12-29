@@ -176,8 +176,19 @@ function getDayMessage(day: number): void {
 					"Sharing Christmas Memories once again. Imagine one day we are the ones hosting the gathering... ahhh 🎄",
 			);
 			break;
+		case 26:
+			alert("We did a lil interviewing. Learned that one company was not it");
+
+			break;
+		case 27:
+			alert(
+				"Teaching you a lil SQL because you came running to me with data base questions inspired to learn 🐘",
+			);
+			break;
 		case 28:
-			alert("this is 28");
+			alert(
+				"You dyed your hair!! And we watched a cozy movie together while we remembered last year's holiday chaos",
+			);
 			break;
 		default:
 			break;
