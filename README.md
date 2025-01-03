@@ -54,6 +54,6 @@ You must change 2 files to include the new URL of your site. If you are not usin
 
 Deploy changes using
 ```bash
-npm run deploy
+npm run deploy -- -m "some deployment message"
 ```
 
