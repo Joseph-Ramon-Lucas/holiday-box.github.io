@@ -25,11 +25,6 @@ function getDayMessage(day: number): void {
 			alert("[DAY 3]\n" + "Talking about all the tea that happened at work 💅");
 			break;
 		case 4:
-			// alert(
-			// 	"[DAY 4]\n" +
-			// 		"Going to see the Philly portal near Love Park and look at the European Traffic lights change colors 🚦\n" +
-			// 		"And everyone's taking pictures of a blank screen while it loads 🌍📸📸📸",
-			// );
 			alert(
 				"[DAY 4]\n" +
 					"I'm pretty sure we went to visit the Philly portal and look at European streets...\n" +
@@ -195,8 +190,29 @@ function getDayMessage(day: number): void {
 					"You dyed your hair!! And we watched a cozy movie together while we remembered last year's holiday chaos",
 			);
 			break;
-		default:
+		case 29:
+			alert(
+				"[DAY 29]\n" +
+					"You spend your time catching up with a from from back home while I'm out. We come together to work on another SQL project late into the night.\n" +
+					"Not sure if coding at midnight is the way to go but we did it 📩",
+			);
 			break;
+		case 30:
+			alert(
+				"[DAY 30]\n" +
+					"We various errands with our families then review the music our friends make in the evening 🎵",
+			);
+			break;
+		case 31:
+			alert(
+				"[DAY 31]\n" +
+					"Such a sleepy day to continue doing work. We celebrate New Years Eve with our friends and family.\n There's fireworks, karaoke and lots of drama all in different places. Peak chaos. 🎇\n" +
+					"No matter what happens in life, we stick together and keep pushing through.\n" +
+					"We've been known for that :)\n\n" +
+					"Thank you for such an amazing year! Hoping 2025 will be even better 💞",
+			);
+			break;
+		default:
 	}
 }
 
